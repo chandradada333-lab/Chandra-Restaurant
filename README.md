@@ -1,6 +1,3 @@
-# Chandra-Restaurant
-echo "# Chandra-Restaurant" >> README.md
-git init
 # Chandra Restaurant
 
 A responsive static restaurant website built with HTML, CSS, and vanilla JavaScript.

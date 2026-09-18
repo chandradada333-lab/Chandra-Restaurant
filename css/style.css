@@ -7,6 +7,7 @@ box-sizing: border-box;
 body {
     font-family: Arial, sans-serif;
     background-color: #312424;
+    line-height: 1.5;
 }
 
 header {
@@ -77,7 +78,8 @@ h1 {
     margin-top: 10px;
 }
 
-.hero button {
+.hero .btn {
+    display: inline-block;
     font-size: 1.3rem;
     padding: 10px 20px;
     margin-top: 20px;
@@ -85,14 +87,21 @@ h1 {
     color: #fff;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    text-decoration: none;
     transition: all 0.3s ease;
 }   
 
-.hero button:hover {
+.hero .btn:hover,
+.hero .btn:focus-visible {
     background-color: #9ff501;
     color: #d60909;
     transform: scale(1.1);
+}
+
+.navbar a:focus-visible,
+.hero .btn:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
 }
 
 
@@ -213,5 +222,58 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+        padding: 0 15px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+    }
+
+    .hero {
+        min-height: 360px;
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero span {
+        font-size: 1.7rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.4rem;
+    }
+
+    .about,
+    .menu,
+    .gallery,
+    .contact {
+        padding: 35px 20px;
+    }
+
+    .about h2,
+    .menu h2,
+    .gallery h2,
+    .contact h2 {
+        font-size: 2.2rem;
+    }
+
+    .about p {
+        font-size: 1.1rem;
+    }
 }
 
